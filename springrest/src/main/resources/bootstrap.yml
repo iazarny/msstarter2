@@ -1,0 +1,14 @@
+info:
+  app:
+    name: Rest service
+    description: Rest
+    version: @version@
+
+spring:
+  application:
+    name: rest-service
+  jmx:
+    default-domain: ${spring.application.name}
+    enabled: false
+  profiles:
+    active: development

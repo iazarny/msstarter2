@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.az.ms</groupId>
+    <artifactId>starter2</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Infrastructure EcoSystem</name>
+
+    <properties>
+        <docker-plugin.version>0.22.1</docker-plugin.version>
+        <gmaven-plugin.version>1.0</gmaven-plugin.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>spring-libs-snapshot</id>
+            <name>Spring Snapshot Repository</name>
+            <url>http://repo.spring.io/libs-snapshot</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker-plugin.version}</version>
+                <configuration>
+                    <authConfig>
+                        <pull>
+                            <username>username</username>
+                            <password>password</password>
+                        </pull>
+                    </authConfig>
+                </configuration>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.codehaus.groovy.maven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>${gmaven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>groovy-magic</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+
+                                def yamls = [
+                                        //'mysql/k8s.yaml',
+                                        //'elk/elasticsearch/k8s.yaml',
+                                        //'elk/kibana/k8s.yaml',
+                                        //'elk/logstash/k8s.yaml',
+                                        //'springeureka/k8s.yaml',
+                                        'springrest/k8s.yaml',
+                                        //'springzuul/k8s.yaml'
+                                ];
+
+                                def folder = new File('k8s');
+                                def resFile = '';
+
+
+                                for (yaml in yamls) {
+                                    File f = new File(yaml)
+                                    if (f.exists() ) {
+                                        resFile += f.text
+                                        resFile += "\n---\n"
+                                    }
+                                }
+
+                                if (!resFile.isEmpty()) {
+                                    if( !folder.exists() ) {
+                                        folder.mkdirs()
+                                    }
+                                    def ymlFile = new File( 'k8s/deploy-all.yml')
+                                    ymlFile.write resFile
+                                }
+
+
+
+                            </source>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+        </plugins>
+
+
+    </build>
+
+    <modules>
+        <module>springrest</module>
+        <module>springgw</module>
+        <module>api</module>
+  </modules>
+
+</project>

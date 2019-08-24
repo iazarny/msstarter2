@@ -1,0 +1,21 @@
+info:
+  version: 2
+
+server:
+  port: ${PORT:8080}
+  security:
+    enabled: false
+
+logging:
+  file: logs/web-service.log
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, loggers, logfile, configprops, httptrace
+
