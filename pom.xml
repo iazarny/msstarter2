@@ -53,13 +53,8 @@
                             <source>
 
                                 def yamls = [
-                                        //'mysql/k8s.yaml',
-                                        //'elk/elasticsearch/k8s.yaml',
-                                        //'elk/kibana/k8s.yaml',
-                                        //'elk/logstash/k8s.yaml',
-                                        //'springeureka/k8s.yaml',
                                         'springrest/k8s.yaml',
-                                        //'springzuul/k8s.yaml'
+                                        'springgw/k8s.yaml'
                                 ];
 
                                 def folder = new File('k8s');

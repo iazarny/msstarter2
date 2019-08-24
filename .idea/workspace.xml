@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dff1e46d-bfd1-4902-824e-7d9d811e96ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/springgw/k8s.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springrest/k8s.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c101.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c111.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c121.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c130.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c141.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c400.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c400.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c411.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c411.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c421.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c421.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c490.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c71.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/cb1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/cc0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/cc0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/cd1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/cd1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/ce1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/ce1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springrest/mydb/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/springrest/mydb/seg0/cf0.dat" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/springrest/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/springzuul/target/" />
+    <ignored path="$PROJECT_DIR$/api/target/" />
+    <ignored path="$PROJECT_DIR$/springgw/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1042">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springgw/k8s.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-709">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springrest/k8s.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-773" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>log</find>
+      <find>st-logstash</find>
+      <find>article</find>
+      <find>/articles</find>
+      <find>learn.json</find>
+      <find>actu</find>
+      <find>getfi</find>
+      <find>learn</find>
+      <find>todoStorage.then</find>
+      <find>local</find>
+      <find>claring static documents, but it falters when we try to use it for declaring dynami</find>
+      <find>secu</find>
+      <find>data</find>
+      <find>der</find>
+      <find>2.</find>
+      <find>rea</find>
+      <find>addfo</find>
+      <find>index</find>
+      <find>st-zuul-web</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>/todos</replace>
+      <replace>st-gw-2</replace>
+      <replace>Gateway</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\home\igor\msstarter2</dir>
+      <dir>C:\home\igor\msstarter2\springzuul\src\main\resources\static</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/dao/TodoDao.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/az/model/TodoEntiry.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/service/TodoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/service/TodoService.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/CrossOriginFilter.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/Starter2Application.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/HelloController.java" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/static/style.css" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/static/app.js" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/static/angular.js" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/springrest/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/Starter2Application.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/ad.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/CommonsRequestLoggingFilter.java" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/static/js/services/todoStorage.js" />
+        <option value="$PROJECT_DIR$/springrest/src/main/resources/templates/error.html" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/LearnController.java" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebMvcConfigurer.java" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/CustomErrorController.java" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/springzuul/pom.xml" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/ZuulStarter2Application.java" />
+        <option value="$PROJECT_DIR$/springrest/pom.xml" />
+        <option value="$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebStarter2Application.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/RestStarter2Application.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/ApiController.java" />
+        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/TodoController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springgw/k8s.yaml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="100" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="820" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tmp/gs-gateway/complete" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.az.ms.starter2" />
+      <recent name="com.az.ms.starter2.rest" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\home\igor\msstarter2\springzuul\src\main\resources\templates" />
+      <recent name="C:\home\igor\msstarter2\springzuul\src\main\resources" />
+      <recent name="C:\home\igor\msstarter2\springrest\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebStarter2Application (1)">
+    <configuration name="All in starter2 (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="starter2 (2)" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Starter2ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="starter2 (2)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.az.ms.starter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.az.ms.starter2" />
+      <option name="MAIN_CLASS_NAME" value="com.az.ms.starter2.Starter2ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestStarter2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="starter2 (2)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.az.ms.starter2.RestStarter2Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebStarter2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zuul-st-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.az.ms.starter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.az.ms.starter2.WebStarter2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebStarter2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="starter2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.az.ms.starter2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.az.ms.starter2.WebStarter2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.All in starter2 (2)" />
+      <item itemvalue="JUnit.Starter2ApplicationTests" />
+      <item itemvalue="Spring Boot.RestStarter2Application" />
+      <item itemvalue="Spring Boot.WebStarter2Application" />
+      <item itemvalue="Spring Boot.WebStarter2Application (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WebStarter2Application (1)" />
+        <item itemvalue="Spring Boot.WebStarter2Application" />
+        <item itemvalue="JUnit.Starter2ApplicationTests" />
+        <item itemvalue="JUnit.All in starter2 (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dff1e46d-bfd1-4902-824e-7d9d811e96ea" name="Default Changelist" comment="" />
+      <created>1566116300288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566116300288</updated>
+      <workItem from="1566116305636" duration="795000" />
+      <workItem from="1566137174225" duration="44356000" />
+      <workItem from="1566312860588" duration="1167000" />
+      <workItem from="1566358330315" duration="8545000" />
+      <workItem from="1566384884670" duration="9354000" />
+      <workItem from="1566460307860" duration="8028000" />
+      <workItem from="1566544098825" duration="18226000" />
+      <workItem from="1566652282075" duration="1488000" />
+      <workItem from="1566670893432" duration="2034000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 07h 55m 18s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 08h 03m 40s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 08h 10m 47s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 08h 24m 28s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 08h 26m 40s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 15h 07m 52s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 15h 12m 36s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 15h 13m 47s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 15h 16m 24s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Starter2ApplicationTests - 2019.08.19 at 15h 19m 13s.xml">
+      <configuration name="Starter2ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="93993000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26588845" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32867134" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.28011206" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.565035" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.6302521" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3294423" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.1.7.RELEASE/spring-boot-actuator-2.1.7.RELEASE-sources.jar!/org/springframework/boot/actuate/endpoint/web/EndpointLinksResolver.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/coyote/http11/Http11Processor.java</url>
+          <line>418</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/coyote/http11/Http11Processor.java</url>
+          <line>420</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/coyote/http11/Http11Processor.java</url>
+          <line>432</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.1.2.RELEASE/spring-cloud-gateway-core-2.1.2.RELEASE-sources.jar!/org/springframework/cloud/gateway/config/GatewayAutoConfiguration.java</url>
+          <line>185</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebStarter2Application.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebStarter2Application.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/HelloController.java</url>
+          <line>15</line>
+          <properties class="com.az.ms.starter2.rest.HelloController" method="index">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/catalina/core/ApplicationFilterChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/coyote/AbstractProcessorLight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/catalina/valves/ErrorReportValve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/catalina/core/StandardHostValve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="252" selection-start-line="252" selection-end-line="252" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="881" selection-start-line="881" selection-end-line="881" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/coyote/AbstractProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+          <folding>
+            <element signature="e#5718#5719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/catalina/connector/CoyoteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="342" selection-start-line="342" selection-end-line="342" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/coyote/http11/Http11Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="442" selection-start-line="442" selection-end-line="442" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22-sources.jar!/org/apache/catalina/core/StandardEngineValve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/resources/static/package.json" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.6.RELEASE/spring-security-config-5.1.6.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#8527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebSecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/CustomErrorController.java" />
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/CrossOriginFilter.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE-sources.jar!/org/springframework/core/OrderComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="e#4776#4777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.2.RELEASE/spring-cloud-netflix-zuul-2.1.2.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/ZuulProxyMarkerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/2.1.5/zuul-core-2.1.5-sources.jar!/com/netflix/zuul/filters/ZuulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#3488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/2.1.5/zuul-core-2.1.5-sources.jar!/com/netflix/zuul/filters/http/HttpSyncEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.2.RELEASE/spring-cloud-netflix-zuul-2.1.2.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/EnableZuulServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.2.RELEASE/spring-cloud-netflix-zuul-2.1.2.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/EnableZuulProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.2.RELEASE/spring-cloud-netflix-zuul-2.1.2.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/ZuulServletFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/az/model/TodoEntiry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/CrossOriginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/ServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE-sources.jar!/org/springframework/format/support/DefaultFormattingConversionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+          <folding>
+            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.1.2.RELEASE/spring-cloud-gateway-core-2.1.2.RELEASE-sources.jar!/org/springframework/cloud/gateway/config/GatewayAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="184" column="24" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE-sources.jar!/org/springframework/format/support/FormattingConversionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="68" column="46" lean-forward="true" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/resources/application.yml" />
+    <entry file="file://$PROJECT_DIR$/springrest/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/resources/static/readme.md" />
+    <entry file="file://$PROJECT_DIR$/springzuul/pom.xml" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/resources/static/index.html" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.1.1.RELEASE/spring-cloud-gateway-core-2.1.1.RELEASE-sources.jar!/org/springframework/cloud/gateway/route/RouteLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.1.1.RELEASE/spring-cloud-gateway-core-2.1.1.RELEASE-sources.jar!/org/springframework/cloud/gateway/route/builder/RouteLocatorBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+          <folding>
+            <element signature="e#2867#2868#0" expanded="true" />
+            <element signature="e#2893#2894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/catalina/connector/CoyoteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="694" selection-start-line="694" selection-end-line="694" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21-sources.jar!/org/apache/coyote/http11/Http11Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="442" selection-start-line="442" selection-end-line="442" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.2.10.RELEASE/reactor-core-3.2.10.RELEASE-sources.jar!/reactor/core/publisher/Mono.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11935">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
+          <folding>
+            <element signature="e#19980#19981#0" expanded="true" />
+            <element signature="e#20026#20027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springzuul/src/main/java/com/az/ms/starter2/WebStarter2Application.java" />
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/service/TodoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/RestStarter2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/ApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/LearnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/rest/TodoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="32" column="65" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1042">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springrest/k8s.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-773" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springgw/k8s.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-709">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
