@@ -18,6 +18,7 @@
   <properties>
     <java.version>1.8</java.version>
     <io.springfox.version>2.7.0</io.springfox.version>
+    <docker-plugin.version>0.22.1</docker-plugin.version>
   </properties>
 
   <dependencies>
@@ -60,6 +61,72 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>only-eclipse</id>
+      <activation>
+        <property>
+          <name>m2e.version</name>
+        </property>
+      </activation>
+      <build>
+
+        <plugins>
+
+          <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>${docker-plugin.version}</version>
+            <configuration>
+              <images>
+                <image>
+                  <name>localhost:5000/${project.artifactId}</name>
+                  <build>
+                    <from>openjdk:8-jdk-alpine</from>
+                    <tags>
+                      <tag>latest</tag>
+                      <tag>${project.version}</tag>
+                    </tags>
+                    <ports>
+                      <port>8080</port>
+                    </ports>
+                    <entryPoint>
+                      <exec>
+                        <arg>java</arg>
+                        <arg>-jar</arg>
+                        <arg>/maven/${project.build.finalName}.${project.packaging}</arg>
+                        <arg>--debug</arg>
+                      </exec>
+                    </entryPoint>
+                    <assembly>
+                      <mode>dir</mode>
+                      <descriptor>assembly.xml</descriptor>
+                    </assembly>
+                  </build>
+                </image>
+              </images>
+            </configuration>
+          </plugin>
+
+        </plugins>
+
+
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.eclipse.m2e</groupId>
+              <artifactId>lifecycle-mapping</artifactId>
+              <version>1.0.0</version>
+              <configuration>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
+
 
 
 
