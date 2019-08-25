@@ -87,7 +87,11 @@ Vagrant.configure("2") do |config|
         install minikube /usr/local/bin
         minikube start
         #sudo minikube start --vm-driver=none
-        
+#certificates 
+        sudo update-ca-certificates -f
+        sudo apt-get install --reinstall ca-certificates-java
+
+      
     SHELL
 
     config.vm.provision "file", source: "ufw", destination: "/home/vagrant/ufw"
