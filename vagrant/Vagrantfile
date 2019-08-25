@@ -99,11 +99,11 @@ Vagrant.configure("2") do |config|
        cp /home/vagrant/ufw  /etc/default/ufw
        chown root:root /etc/default/ufw
        iptables -t filter --policy FORWARD ACCEPT
-       echo "-------------------------------------------------"
-       echo "| 1. Change vagrant passord.                    |"
-       echo "| 2. Clone the yes cart repo and build as usual |"
-       echo "-------------------------------------------------"
-       echo "-------------------------------------------------"
+       echo "----------------------------------------------------"
+       echo "| 1. Change vagrant passord.                       |"
+       echo "| 2. Clone the m starter 2 repo and build as usual |"
+       echo "----------------------------------------------------"
+       echo "----------------------------------------------------"
        service ssh restart
     SHELL
 
