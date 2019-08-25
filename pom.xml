@@ -9,14 +9,14 @@
     <name>Infrastructure EcoSystem</name>
 
     <properties>
-        <docker-plugin.version>0.28.0</docker-plugin.version>
+        <docker-plugin.version>0.22.1</docker-plugin.version>
         <gmaven-plugin.version>1.0</gmaven-plugin.version>
     </properties>
 
 
     <build>
         <plugins>
-            <plugin>
+            <!--<plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>${docker-plugin.version}</version>
@@ -28,7 +28,9 @@
                         </pull>
                     </authConfig>
                 </configuration>
-            </plugin>
+            </plugin>-->
+
+
 
 
             <plugin>

@@ -57,11 +57,14 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<docker-plugin.version>0.28.0</docker-plugin.version>
+		<docker-plugin.version>0.22.1</docker-plugin.version>
 	</properties>
 
 	<build>
 		<plugins>
+
+
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -82,7 +85,7 @@
 									<tag>${project.version}</tag>
 								</tags>
 								<ports>
-									<port>8080</port>
+									<port>22222</port>
 								</ports>
 								<entryPoint>
 									<exec>
