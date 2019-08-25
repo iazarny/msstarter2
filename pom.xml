@@ -13,13 +13,6 @@
         <gmaven-plugin.version>1.0</gmaven-plugin.version>
     </properties>
 
-    <!--repositories>
-        <repository>
-            <id>spring-libs-snapshot</id>
-            <name>Spring Snapshot Repository</name>
-            <url>http://repo.spring.io/libs-snapshot</url>
-        </repository>
-    </repositories-->
 
     <build>
         <plugins>
