@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.az.ms</groupId>
+    <groupId>com.az.ms2</groupId>
     <artifactId>starter2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -13,13 +13,13 @@
         <gmaven-plugin.version>1.0</gmaven-plugin.version>
     </properties>
 
-    <repositories>
+    <!--repositories>
         <repository>
             <id>spring-libs-snapshot</id>
             <name>Spring Snapshot Repository</name>
             <url>http://repo.spring.io/libs-snapshot</url>
         </repository>
-    </repositories>
+    </repositories-->
 
     <build>
         <plugins>
