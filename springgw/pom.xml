@@ -6,7 +6,7 @@
 	<groupId>com.az.ms</groupId>
 	<artifactId>gw-st-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Gateway starter2</name>
 	<description>Spring GW 2</description>
 
