@@ -1,5 +1,5 @@
 {
-  "name": "gw-st-2",
+  "name": "rest-st-2",
   "tag": "localhost:5000/rest-st-2:0.0.1-SNAPSHOT",
   "fsLayers": [  ],
   "history": "localhost:5000/rest-st-2:0.0.1-SNAPSHOT",
