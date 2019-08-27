@@ -2,12 +2,6 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
     <fileSets>
-        <!--<fileSet>
-            <directory>${project.basedir}/src/main/docker</directory>
-            <outputDirectory>/</outputDirectory>
-            <filtered>true</filtered>
-            <fileMode>755</fileMode>
-        </fileSet>-->
         <fileSet>
             <directory>${project.basedir}/target</directory>
             <outputDirectory>/</outputDirectory>
@@ -22,6 +16,7 @@
             <filtered>false</filtered>
             <includes>
                 <include>manifest.yml</include>
+                <include>manifest.json</include>
             </includes>
         </fileSet>
     </fileSets>
