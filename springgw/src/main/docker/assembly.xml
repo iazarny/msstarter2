@@ -17,7 +17,7 @@
             </includes>
         </fileSet>
         <fileSet>
-            <directory>/</directory>
+            <directory>${project.basedir}</directory>
             <outputDirectory>/</outputDirectory>
             <filtered>false</filtered>
             <includes>
@@ -26,3 +26,4 @@
         </fileSet>
     </fileSets>
 </assembly>
+
