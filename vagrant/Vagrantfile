@@ -95,10 +95,16 @@ Vagrant.configure("2") do |config|
         install minikube /usr/local/bin
         minikube start
         #sudo minikube start --vm-driver=none
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+        chmod +x kubectl
+        sudo mv ./kubectl /usr/local/bin/kubectl
 #certificates 
         sudo update-ca-certificates -f
         sudo apt-get install --reinstall ca-certificates-java
 
+#build
+#mvn clean install fabric8:build fabric8:push
+#git clone https://github.com/iazarny/msstarter2.git
       
     SHELL
 
