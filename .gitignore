@@ -1,0 +1,32 @@
+# Eclipse
+.classpath
+.project
+.gitemberSettings/
+.checkstyle
+
+# Intellij
+.idea/*
+.idea/workspace.xml
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+*.log
+build/
+
+#vagrant
+.vagrant/
+*.box
+
+
+# Enterprise Architect
+*.ldb
+
+*.bak
+

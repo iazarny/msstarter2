@@ -9,17 +9,17 @@
     <name>Infrastructure EcoSystem</name>
 
     <properties>
-        <docker-plugin.version>0.22.1</docker-plugin.version>
+        <fabric8-plugin.version>4.2.0</fabric8-plugin.version>
         <gmaven-plugin.version>1.0</gmaven-plugin.version>
     </properties>
 
 
     <build>
         <plugins>
-            <!--<plugin>
+            <plugin>
                 <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>${docker-plugin.version}</version>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>${fabric8-plugin.version}</version>
                 <configuration>
                     <authConfig>
                         <pull>
@@ -28,7 +28,7 @@
                         </pull>
                     </authConfig>
                 </configuration>
-            </plugin>-->
+            </plugin>
 
 
 
@@ -85,6 +85,32 @@
 
 
     </build>
+
+    <profiles>
+        <profile>
+            <id>only-eclipse</id>
+            <activation>
+                <property>
+                    <name>m2e.version</name>
+                </property>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.eclipse.m2e</groupId>
+                            <artifactId>lifecycle-mapping</artifactId>
+                            <version>1.0.0</version>
+                            <configuration>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
+
 
     <modules>
         <module>springrest</module>

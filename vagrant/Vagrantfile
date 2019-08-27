@@ -80,6 +80,7 @@ Vagrant.configure("2") do |config|
         newgrp docker
         
         docker run hello-world
+        export DOCKER_OPTS="$DOCKER_OPTS --insecure-registry=localhost:5000"
         docker run -d -p 5000:5000 --restart=always --name registry registry:2
         service docker restart
         docker pull alpine

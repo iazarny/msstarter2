@@ -16,5 +16,13 @@
                 <include>${project.build.finalName}.${project.packaging}</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <directory>/</directory>
+            <outputDirectory>/</outputDirectory>
+            <filtered>false</filtered>
+            <includes>
+                <include>manifest.yml</include>
+            </includes>
+        </fileSet>
     </fileSets>
 </assembly>
