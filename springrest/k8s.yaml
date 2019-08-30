@@ -33,7 +33,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /application/env
-            port: 222222
+            port: 22222
             scheme: HTTP
           initialDelaySeconds: 30
           timeoutSeconds: 5
