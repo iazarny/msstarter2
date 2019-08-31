@@ -30,17 +30,8 @@ public class TodoController {
     @GetMapping("/todos")
     @ApiOperation("Get all todo items")
     public ResponseEntity<List<TodoEntiry>> listAllTodos() {
-        TodoEntiry todoEntiry0 = new TodoEntiry("Todo 1", false);
-        TodoEntiry todoEntiry1 = new TodoEntiry("Todo 2", true);
-        TodoEntiry todoEntiry2 = new TodoEntiry("Todo 3", true);
-        TodoEntiry todoEntiry3 = new TodoEntiry("Todo 4", true);
-        List<TodoEntiry> todoEntiries = new ArrayList<>();
-        todoEntiries.add(todoEntiry0);
-        todoEntiries.add(todoEntiry1);
-        todoEntiries.add(todoEntiry2);
-        todoEntiries.add(todoEntiry3);
         log.info("Get all to do items");
-        return new ResponseEntity<List<TodoEntiry>>(todoEntiries, HttpStatus.OK);
+        return new ResponseEntity<List<TodoEntiry>>(todoService.getAllTodo(), HttpStatus.OK);
     }
 
     @PostMapping("/todos")

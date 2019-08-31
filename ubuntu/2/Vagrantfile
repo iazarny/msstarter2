@@ -8,10 +8,10 @@
 
 
 Vagrant.configure("2") do |config|
-    config.vm.box = "generic/fedora28"
-    #config.vm.box = "cibt0943/centos7
+    #config.vm.box = "ubuntu/xenial64"
+    config.vm.box = "generic/fedora27"
 
-    config.vm.hostname = "minikube"
+    config.vm.hostname = "MSStarter-2"
     config.vm.boot_timeout = 120
     config.ssh.insert_key = false
     # in case of problems during provision (vagrant cannot login to vm box) uncomment 2 lines below
@@ -41,51 +41,28 @@ Vagrant.configure("2") do |config|
 
 
     config.vm.provider "virtualbox" do |vb|
-        vb.name = "minikube"
+        vb.name = "MSStarter-2"
         vb.gui = true
         vb.memory = "6144"
         vb.cpus = 2
     end
 
-
-#    config.vm.provision "shell", inline: <<-SHELL
-
-# reboot
-#        config.vm.provision :reload
-#    SHELL
-
-
-
     #config.vm.provision :shell, inline: "mkdir -p /home/vagrant/.m2 && chown vagrant:vagrant /home/vagrant/.m2"
     config.vm.provision "shell", inline: <<-SHELL
-
-
-#selinux
-        setenforce 0
-        setenforce Permissive
-        sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
-        sestatus
-
+        apt-get update
 #tools
-        yum install  -y git   
-        yum install  -y wget 
-        yum install  -y curl   
-        yum install  -y net-tools    
-        yum install  -y mc 
-        yum install  -y unzip   
-        yum install  -y jq  
-        yum install  -y socat
-        dng remove -y memcached
-#system 
-        iptables -t filter --policy FORWARD ACCEPT
-        systemctl disable firewalld
-        systemctl stop firewalld
-        #systemctl status firewalld	
-
+        yum install  -y git
+        yum install  -y  wget
+        yum install   -y curl
+        yum install   -y net-tools
+        yum install  -y  mc
+        yum install   -y unzip
+	yum install   -y jq
+        #yum install  apache2
 
 #java
-        dnf search openjdk-devel
-        yum install -y java-1.8.0-openjdk-devel
+        dnf search openjdk
+        dnf install -y java-1.8.0-openjdk.x86_64
 
         wget http://www-eu.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
         tar xzvf apache-maven-3.6.1-bin.tar.gz -C /usr/local/
@@ -111,32 +88,19 @@ Vagrant.configure("2") do |config|
         docker push localhost:5000/local-alpine
 
 #k8s
-       echo "-------------------------------------------------"
-       echo "| Instll k8s                                    |"
-       echo "-------------------------------------------------"
+        curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube
+        install minikube /usr/local/bin
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+        chmod +x kubectl
+        mv ./kubectl /usr/local/bin/kubectl
 
-        yum provides */semanage
-        dnf install -y policycoreutils-python-utils
-        curl -sfL https://get.k3s.io | sh -
-
-#       kubectl get po -A
+        #minikube start
+        minikube start --vm-driver=none
 
 #build
-       echo "-------------------------------------------------"
-       echo "| Follow the build section manually             |"
-       echo "-------------------------------------------------"
 
-        #git clone https://github.com/iazarny/msstarter2.git
-        #cd msstarter2
-        #mvn clean install
-        #cd springgw
-        #mvn install fabric8:build fabric8:push
-        #cd ../springrest
-        #mvn install fabric8:build fabric8:push
-        #cd ..
-        #kubectl create -f k8s/deploy-all.yml
-#----------------------------------------------------
-
+#git clone https://github.com/iazarny/msstarter2.git
+#mvn clean install fabric8:build fabric8:push
       
     SHELL
 

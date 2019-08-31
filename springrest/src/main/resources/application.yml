@@ -1,5 +1,7 @@
 info:
-  version: @version@
+  version: 2
+
+
 
 
 spring:
@@ -7,14 +9,15 @@ spring:
     url: jdbc:derby:mydb;create=true
     username: root
     password: password
+    schema:
+      - classpath:/schema.sql
+    data:
+      - classpath:/data.sql
   jpa:
-    #hibernate.ddl-auto: validate
     hibernate.ddl-auto: update
-
     properties:
       hibernate:
         dialect: org.hibernate.dialect.DerbyTenSevenDialect
-#        cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
         connection.release_mode: on_close
         globally_quoted_identifiers: true
 
