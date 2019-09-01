@@ -24,16 +24,16 @@ spec:
         run: st-gw-2
     spec:
       containers:
-      - image: localhost:5000/st-gw-2
+      - image: localhost:5000/st-gw-2:2
         imagePullPolicy: Always
         name: st-gw-2
         ports:
-        - containerPort: 8080
+        - containerPort: 20000
           protocol: TCP
         readinessProbe:
           httpGet:
-            path: /application/env
-            port: 8080
+            path: /actuator/health
+            port: 20000
             scheme: HTTP
           initialDelaySeconds: 30
           timeoutSeconds: 5
@@ -60,8 +60,8 @@ metadata:
   namespace: default
 spec:
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 20000
+    targetPort: 20000
   selector:
     run: st-gw-2
   sessionAffinity: None
