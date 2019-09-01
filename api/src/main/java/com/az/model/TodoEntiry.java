@@ -4,14 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity
 
@@ -33,10 +29,10 @@ public class TodoEntiry  implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "Todo", required = true)
-    private String value;
+    private String title;
 
     @ApiModelProperty(value = "Done", required = true)
-    private boolean done;
+    private boolean completed;
 
     public Long getId() {
         return id;
@@ -46,25 +42,25 @@ public class TodoEntiry  implements Serializable {
         this.id = id;
     }
 
-    public String getValue() {
-        return value;
+    public String getTitle() {
+        return title;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public boolean isDone() {
-        return done;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setDone(boolean done) {
-        this.done = done;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
-    public TodoEntiry(String value, boolean done) {
-        this.value = value;
-        this.done = done;
+    public TodoEntiry(String title, boolean completed) {
+        this.title = title;
+        this.completed = completed;
     }
 
     public TodoEntiry() {

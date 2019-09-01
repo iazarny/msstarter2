@@ -3,23 +3,19 @@ info:
 
 
 
-
 spring:
   datasource:
-    url: jdbc:derby:mydb;create=true
-    username: root
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
     password: password
-    schema:
-      - classpath:/schema.sql
-    data:
-      - classpath:/data.sql
   jpa:
     hibernate.ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.DerbyTenSevenDialect
+        dialect: org.hibernate.dialect.H2Dialect
         connection.release_mode: on_close
         globally_quoted_identifiers: true
+    show-sql: true
 
 
 server:

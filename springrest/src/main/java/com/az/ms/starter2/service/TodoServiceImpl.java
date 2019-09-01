@@ -15,6 +15,12 @@ public class TodoServiceImpl  implements TodoService {
     private TodoDao todoDao;
 
     public List<TodoEntiry> getAllTodo() {
+        List<TodoEntiry> rz = todoDao.findAll();
+        if (rz.isEmpty()) {
+            createTodo(new TodoEntiry("Have", false));
+            createTodo(new TodoEntiry(" some", true));
+            createTodo(new TodoEntiry("  fun", false));
+        }
         return todoDao.findAll();
     }
 
@@ -31,8 +37,8 @@ public class TodoServiceImpl  implements TodoService {
     public TodoEntiry updateTodo(Long todoId, TodoEntiry todoEntity) {
         TodoEntiry found =this.getTodoById(todoId);
         if(found != null) {
-            found.setValue(todoEntity.getValue());
-            found.setDone(todoEntity.isDone());
+            found.setTitle(todoEntity.getTitle());
+            found.setCompleted(todoEntity.isCompleted());
             todoDao.save(found);
         }
         return null;

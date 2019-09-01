@@ -2,7 +2,7 @@ info:
   version: 2
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:20000}
   security:
     enabled: false
 
