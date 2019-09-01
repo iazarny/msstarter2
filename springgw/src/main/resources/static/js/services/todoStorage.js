@@ -15,7 +15,7 @@ angular.module('todomvc')
 		console.info("API  only ... No local storage");
 		// Detect if an API backend is present. If so, return the API module, else
 		// hand off the localStorage adapter
-		return $http.get('http://localhost:22222/api')
+		return $http.get('http://rest-st-2:22222/api')
 			.then(function () {
 				return $injector.get('api');
 			}, function () {

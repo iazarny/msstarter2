@@ -7,8 +7,8 @@ With / without docker and kubernetes (using K3S)
  * On local station using regular java applications
  * Inside vagrant box with k8s and docker ( require some adition steps)
 
-#  Build steps for local station
-
+Build steps for local station
+ * For local station just create **resthost** in **hosts** file and point to 127.0.0.1 Examle **	127.0.0.2       resthost **
  * Do following
   
 ```
@@ -27,11 +27,11 @@ With / without docker and kubernetes (using K3S)
 
  |URL                             | Result          |
  |--------------------------------|-----------------|
- |http://localhost:22222/          | Greetings from Spring Boot! |
- |http://localhost:22222/api       | Api module presented |
- |http://localhost:22222/api/todos | ```[{"id":1,"title":"Have","completed":false},{"id":2,"title":" some","completed":true},{"id":3,"title":"  fun","completed":false}]```  |
+ |http://rest-st-2:22222/          | Greetings from Spring Boot! |
+ |http://rest-st-2:22222/api       | Api module presented |
+ |http://rest-st-2:22222/api/todos | ```[{"id":1,"title":"Have","completed":false},{"id":2,"title":" some","completed":true},{"id":3,"title":"  fun","completed":false}]```  |
 
- * Gateway service delegates mostly all calls to localhost:22222
+ * Gateway service delegates mostly all calls to rest-st-2:22222
  * So need to to check 
 
  |URL                              | Result          |
@@ -66,8 +66,11 @@ kubectl create -f k8s/deploy-all.yml
 Actually **gw-st-2** is enough, because some part it delegates, some part it handle
 
 ```
-kubectl expose deployment gw-st-2     --port=20000  --target-port=20000 --name=ext-gw-st-2    --external-ip=172.28.128.3
-kubectl expose deployment rest-st-2   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.57
+kubectl expose rs gw-st-2-ddc88dd9       --port=20000  --target-port=20000 --name=ext-gw-st-2    --external-ip=172.28.128.62
+kubectl expose rs rest-st-2-7b767bf688   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.62
+
+
+
 
 ```
 

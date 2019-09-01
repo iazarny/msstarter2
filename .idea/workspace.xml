@@ -23,7 +23,50 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="306">
+                <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springgw/src/main/java/com/az/ms/starter2/WebStarter2Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/static/js/services/todoStorage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springgw/k8s.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="45" column="55" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,7 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getfi</find>
       <find>learn</find>
       <find>todoStorage.then</find>
       <find>local</find>
@@ -65,6 +107,7 @@
       <find>st-</find>
       <find>st-rest-2</find>
       <find>resthost</find>
+      <find>return $http.get('http://localhost:22222/api')</find>
     </findStrings>
     <replaceStrings>
       <replace>/todos</replace>
@@ -93,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/dao/TodoDao.java" />
         <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/service/TodoService.java" />
         <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/CrossOriginFilter.java" />
@@ -134,7 +176,6 @@
         <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/DbConfig.java" />
         <option value="$PROJECT_DIR$/springrest/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/service/TodoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/springgw/src/main/resources/static/js/services/todoStorage.js" />
         <option value="$PROJECT_DIR$/springgw/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/az/model/TodoEntiry.java" />
         <option value="$PROJECT_DIR$/springrest/src/main/resources/logback.xml" />
@@ -144,6 +185,8 @@
         <option value="$PROJECT_DIR$/springgw/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/springgw/k8s.yaml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/springgw/src/main/java/com/az/ms/starter2/WebStarter2Application.java" />
+        <option value="$PROJECT_DIR$/springgw/src/main/resources/static/js/services/todoStorage.js" />
       </list>
     </option>
   </component>
@@ -163,7 +206,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="100" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -174,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,13 +227,60 @@
             <path>
               <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
               <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
-              <item name="vagrant" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="starter2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,7 +419,8 @@
       <workItem from="1566712799958" duration="7687000" />
       <workItem from="1566751837042" duration="9332000" />
       <workItem from="1567185774281" duration="28357000" />
-      <workItem from="1567346556121" duration="484000" />
+      <workItem from="1567346556121" duration="2065000" />
+      <workItem from="1567359473522" duration="948000" />
     </task>
     <task id="LOCAL-00001" summary="k8s chnage port to 20000">
       <created>1567322822683</created>
@@ -375,7 +465,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139891000" />
+    <option name="totallyTimeSpent" value="142420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,8 +478,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1919585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19520104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -401,7 +492,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.50700283" />
       <window_info anchor="bottom" id="TODO" order="3" weight="0.32867134" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.22829132" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.5168067" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.5868347" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -733,16 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/static/js/services/todoStorage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springrest/src/main/java/com/az/ms/starter2/service/TodoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -834,13 +915,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springgw/src/main/java/com/az/ms/starter2/CrossOriginFilter.java" />
-    <entry file="file://$PROJECT_DIR$/springgw/src/main/java/com/az/ms/starter2/WebStarter2Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springgw/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -855,27 +929,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="349">
-            <caret line="59" selection-start-line="52" selection-end-line="59" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springgw/k8s.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        <state relative-caret-position="277">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springgw/src/main/java/com/az/ms/starter2/WebStarter2Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/static/js/services/todoStorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
