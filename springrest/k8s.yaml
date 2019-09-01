@@ -24,7 +24,7 @@ spec:
         run: st-rest-2
     spec:
       containers:
-      - image: localhost:5000/st-rest-2
+      - image: localhost:5000/st-rest-2:2
         imagePullPolicy: Always
         name: st-rest-2
         ports:
@@ -32,7 +32,7 @@ spec:
           protocol: TCP
         readinessProbe:
           httpGet:
-            path: /application/env
+            path: /actuator/health
             port: 22222
             scheme: HTTP
           initialDelaySeconds: 30

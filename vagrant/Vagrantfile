@@ -126,6 +126,7 @@ Vagrant.configure("2") do |config|
        echo "| Follow the build section manually             |"
        echo "-------------------------------------------------"
 
+        #sudo su -
         #git clone https://github.com/iazarny/msstarter2.git
         #cd msstarter2
         #mvn clean install

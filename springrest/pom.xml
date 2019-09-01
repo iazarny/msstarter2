@@ -101,11 +101,12 @@
 							<build>
 								<from>openjdk:8-jdk-alpine</from>
 								<tags>
+									<tag>2</tag>
 									<tag>latest</tag>
 									<tag>${project.version}</tag>
 								</tags>
 								<ports>
-									<port>8080</port>
+									<port>22222</port>
 								</ports>
 								<entryPoint>
 									<exec>

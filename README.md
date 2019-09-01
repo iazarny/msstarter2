@@ -7,7 +7,7 @@ With / without docker and kubernetes (using K3S)
  * On local station using regular java applications
  * Inside vagrant box with k8s and docker ( require some adition steps)
 
-#  Build steps
+#  Build steps for local station
  * For local station just create **resthost** in **hosts** file and point to 127.0.0.1 Examle **	127.0.0.2       resthost **
  * Do following
   
@@ -40,11 +40,26 @@ With / without docker and kubernetes (using K3S)
 
  * At least on **http://localhost:20000/api/todos** you have to see following TODO application
 
-![TODO app] (img1.png)
+![TODO App](/img1.png)
 
-![TODO App 2](http://github.com/iazarny/msstarter2/img1.png)
+#  Build steps for Vagrant
+```
+cd vagrant
+vagrant up
+vagrant ssh
 
-![TODO App 3](/img1.png)
+sudo su -
+git clone https://github.com/iazarny/msstarter2.git
+cd msstarter2
+mvn clean install
+cd springgw
+mvn install fabric8:build fabric8:push
+cd ../springrest
+mvn install fabric8:build fabric8:push
+cd ..
+kubectl create -f k8s/deploy-all.yml
 
+```
 
+# Check steps far  Vagrant	
 
