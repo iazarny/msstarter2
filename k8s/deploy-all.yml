@@ -1,0 +1,140 @@
+########################################################################################################################
+# Deployment. Rest
+########################################################################################################################
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: rest-st-2
+  name: rest-st-2
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: rest-st-2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: rest-st-2
+    spec:
+      containers:
+      - image: localhost:5000/rest-st-2
+        imagePullPolicy: Always
+        name: rest-st-2
+        ports:
+        - containerPort: 22222
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /application/env
+            port: 22222
+            scheme: HTTP
+          initialDelaySeconds: 30
+          timeoutSeconds: 5
+        env:
+        terminationMessagePath: /dev/termination-log
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+---
+########################################################################################################################
+# Service. Internal. Rest
+########################################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: rest-st-2
+  name: rest-st-2
+  namespace: default
+spec:
+  ports:
+  - port: 22222
+    targetPort: 22222
+  selector:
+    run: rest-st-2
+  sessionAffinity: None
+  type: LoadBalancer
+
+
+
+---
+########################################################################################################################
+# Deployment. Gateway and web server
+########################################################################################################################
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: st-gw-2
+  name: st-gw-2
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: st-gw-2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: st-gw-2
+    spec:
+      containers:
+      - image: localhost:5000/st-gw-2
+        imagePullPolicy: Always
+        name: st-gw-2
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /application/env
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 30
+          timeoutSeconds: 5
+        env:
+        terminationMessagePath: /dev/termination-log
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - name: rest-st-2
+        image: busybox
+        command: ['sh', '-c', 'until nslookup rest-st-2; do echo waiting for rest-st-2; sleep 10; done;']
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+---
+########################################################################################################################
+# Service. Gateway and Web Server
+########################################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: st-gw-2
+  name: st-gw-2
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    run: st-gw-2
+  sessionAffinity: None
+  type: LoadBalancer
+
+
+
+---
