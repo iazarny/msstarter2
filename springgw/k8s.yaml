@@ -32,7 +32,7 @@ spec:
           protocol: TCP
         readinessProbe:
           httpGet:
-            path: /actuator/health
+            path: /index.html#/
             port: 20000
             scheme: HTTP
           initialDelaySeconds: 30

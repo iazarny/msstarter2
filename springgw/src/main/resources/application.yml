@@ -6,6 +6,10 @@ server:
   security:
     enabled: false
 
+error:
+  whitelabel:
+    enabled:false
+
 logging:
   file: logs/web-service.log
   level:

@@ -67,7 +67,7 @@ Actually **st-wg-2** is enough, because some part it delegates, some part it han
 
 ```
 kubectl expose deployment gw-st-2     --port=20000  --target-port=20000 --name=ext-gw-st-2    --external-ip=172.28.128.3
-kubectl expose deployment rest-st-2   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.3
+kubectl expose deployment rest-st-2   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.57
 
 ```
 

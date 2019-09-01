@@ -75,6 +75,7 @@ Vagrant.configure("2") do |config|
         yum install  -y unzip   
         yum install  -y jq  
         yum install  -y socat
+        yum install -y bind-utils
         dng remove -y memcached
 #system 
         iptables -t filter --policy FORWARD ACCEPT
