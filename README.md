@@ -42,5 +42,9 @@ With / without docker and kubernetes (using K3S)
 
 ![TODO app] (img1.png)
 
+![TODO App 2](http://github.com/iazarny/msstarter2/img1.png)
+
+![TODO App 3](/img1.png)
+
 
 
