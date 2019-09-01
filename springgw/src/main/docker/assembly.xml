@@ -20,5 +20,11 @@
             </includes>
         </fileSet>
     </fileSets>
+    <fileSet>
+        <directory>${project.basedir}/src/main/resources/static</directory>
+        <outputDirectory>/zzz</outputDirectory>
+        <filtered>false</filtered>
+
+    </fileSet>
 </assembly>
 

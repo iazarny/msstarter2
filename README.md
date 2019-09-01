@@ -8,7 +8,7 @@ With / without docker and kubernetes (using K3S)
  * Inside vagrant box with k8s and docker ( require some adition steps)
 
 Build steps for local station
- * For local station just create **resthost** in **hosts** file and point to 127.0.0.1 Examle **	127.0.0.2       resthost **
+ * For local station just create **resthost** in **hosts** file and point to 127.0.0.1 Example **	127.0.0.2       resthost **
  * Do following
   
 ```
@@ -62,15 +62,20 @@ kubectl create -f k8s/deploy-all.yml
 ```
 ## Expose to external IP address
 
-   Expose service(s) on some IP addresses  in our case 172.28.128.3. The ip address to access from host machine to vagrant box using tpc/ip. 
+   Expose service(s) on some IP addresses  in our case 172.28.128.62 The ip address to access from host machine to vagrant box using tpc/ip. 
 Actually **gw-st-2** is enough, because some part it delegates, some part it handle
+```
+[root@minikube msstarter2]# kubectl get rs -A
+NAMESPACE     NAME                   DESIRED   CURRENT   READY   AGE
+default       gw-st-2-ddc88dd9       1         1         1       9m2s
+default       rest-st-2-7b767bf688   1         1         1       9m2s
+kube-system   coredns-b7464766c      1         1         1       37m
+kube-system   traefik-5c79b789c5     1         1         1       36m
+```
 
 ```
-kubectl expose rs gw-st-2-ddc88dd9       --port=20000  --target-port=20000 --name=ext-gw-st-2    --external-ip=172.28.128.62
-kubectl expose rs rest-st-2-7b767bf688   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.62
-
-
-
+kubectl expose rs gw-st-2-ddc88dd9       --port=20000  --target-port=20000 --name=ext-gw-st-2    --external-ip=172.28.128.63
+kubectl expose rs rest-st-2-7b767bf688   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.63
 
 ```
 
