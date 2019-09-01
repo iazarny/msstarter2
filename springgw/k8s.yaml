@@ -41,9 +41,9 @@ spec:
         terminationMessagePath: /dev/termination-log
       dnsPolicy: ClusterFirst
       initContainers:
-      - name: st-rest-2
+      - name: rest-st-2
         image: busybox
-        command: ['sh', '-c', 'until nslookup st-rest-2; do echo waiting for st-rest-2; sleep 10; done;']
+        command: ['sh', '-c', 'until nslookup rest-st-2; do echo waiting for rest-st-2; sleep 10; done;']
       restartPolicy: Always
       securityContext: {}
       terminationGracePeriodSeconds: 30
