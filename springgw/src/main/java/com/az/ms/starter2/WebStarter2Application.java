@@ -26,7 +26,7 @@ public class WebStarter2Application {
 
 	@Bean
 	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-		String httpUri = "http://resthost:22222";
+		String httpUri = "http://localhost:22222";
 		return builder.routes()
 
 				.route(p -> p
