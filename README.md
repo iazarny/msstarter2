@@ -60,6 +60,19 @@ cd ..
 kubectl create -f k8s/deploy-all.yml
 
 ```
+## Expose to external IP address
+
+   Expose service(s) on some IP addresses  in our case 172.28.128.3. The ip address to access from host machine to vagrant box using tpc/ip. 
+Actually **st-wg-2** is enough, because some part it delegates, some part it handle
+
+```
+kubectl expose deployment gw-st-2     --port=20000  --target-port=20000 --name=ext-gw-st-2    --external-ip=172.28.128.3
+kubectl expose deployment rest-st-2   --port=22222  --target-port=22222 --name=ext-rest-st-2  --external-ip=172.28.128.3
+
+```
 
 # Check steps far  Vagrant	
+ The same as for sping app from host machine
+
+
 

@@ -5,14 +5,14 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    run: st-gw-2
-  name: st-gw-2
+    run: gw-st-2
+  name: gw-st-2
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: st-gw-2
+      run: gw-st-2
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -21,12 +21,12 @@ spec:
   template:
     metadata:
       labels:
-        run: st-gw-2
+        run: gw-st-2
     spec:
       containers:
-      - image: localhost:5000/st-gw-2:2
+      - image: localhost:5000/gw-st-2:2
         imagePullPolicy: Always
-        name: st-gw-2
+        name: gw-st-2
         ports:
         - containerPort: 20000
           protocol: TCP
@@ -55,15 +55,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    run: st-gw-2
-  name: st-gw-2
+    run: gw-st-2
+  name: gw-st-2
   namespace: default
 spec:
   ports:
   - port: 20000
     targetPort: 20000
   selector:
-    run: st-gw-2
+    run: gw-st-2
   sessionAffinity: None
   type: LoadBalancer
 
