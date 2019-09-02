@@ -18,14 +18,7 @@
                 <include>manifest.yml</include>
                 <include>manifest.json</include>
             </includes>
-        </fileSet>
-        <fileSet>
-            <directory>${project.basedir}/src/main/resources/static</directory>
-            <outputDirectory>/zzz</outputDirectory>
-            <filtered>false</filtered>
-
-        </fileSet>
-
+        </fileSet>  
     </fileSets>
 </assembly>
 

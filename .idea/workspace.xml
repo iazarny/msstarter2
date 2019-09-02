@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dff1e46d-bfd1-4902-824e-7d9d811e96ea" name="Default Changelist" comment="" />
+    <list default="true" id="dff1e46d-bfd1-4902-824e-7d9d811e96ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springgw/src/main/docker/assembly.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springgw/src/main/docker/assembly.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springgw/src/main/resources/static/.gitignore" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/springrest/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/springgw/src/main/docker/assembly.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -224,7 +228,78 @@
               <item name="springgw" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="angular" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-route" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="todomvc-app-css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msstarter2" type="462c0819:PsiDirectoryNode" />
+              <item name="springgw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="todomvc-common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,7 +446,7 @@
       <workItem from="1566751837042" duration="9332000" />
       <workItem from="1567185774281" duration="28357000" />
       <workItem from="1567346556121" duration="2065000" />
-      <workItem from="1567359473522" duration="5407000" />
+      <workItem from="1567359473522" duration="8667000" />
     </task>
     <task id="LOCAL-00001" summary="k8s chnage port to 20000">
       <created>1567322822683</created>
@@ -416,7 +491,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146879000" />
+    <option name="totallyTimeSpent" value="150139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,7 +506,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19520104" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26459143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -889,13 +964,6 @@
     <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/static/node_modules/todomvc-common/base.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/springgw/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="94" column="52" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springgw/src/main/resources/static/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -904,10 +972,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/springgw/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="94" column="52" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/springgw/src/main/docker/assembly.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
