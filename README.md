@@ -1,11 +1,9 @@
 # Msstarter2
 
-    Simple and Minimal starter 2 for spring boot microservices and angular js .
-With / without docker and kubernetes (using K3S)
-
-# Explanation
-
-Just picture
+ * Simple and Minimal starter 2 for spring boot microservices and angular js . 
+ * Look for previos for more integration options
+ * With and without docker and kubernetes (using K3S)
+ * Explanation - Just picture. The rest for information read bellow
 
 ![Explanation](/img3.png)
 
@@ -67,6 +65,9 @@ cd ..
 kubectl create -f k8s/deploy-all.yml
 
 ```
+
+
+
 ## Expose to external IP address
 
    Expose service(s) on some IP addresses  in our case 172.28.128.62 The ip address to access from host machine to vagrant box using tpc/ip. 
