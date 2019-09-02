@@ -8,7 +8,8 @@ With / without docker and kubernetes (using K3S)
  * Inside vagrant box with k8s and docker ( require some adition steps)
 
 Build steps for local station
- * For local station just create **resthost** in **hosts** file and point to 127.0.0.1 Example **	127.0.0.2       resthost **
+ * For local station just create **rest-st-2** in **hosts** file and point to 127.0.0.1 Example **	127.0.0.2       rest-st-2 **
+ * The rest-st-2 used inside vagrant and for separate java apps as well
  * Do following
   
 ```
@@ -82,5 +83,51 @@ kubectl expose rs rest-st-2-7b767bf688   --port=22222  --target-port=22222 --nam
 # Check steps far  Vagrant	
  The same as for sping app from host machine
 
+![TODO App on Vagrant box](/img2.png)
+
+The picture shall be similar
+```$xslt
+[root@minikube springgw]# kubectl get all
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/gw-st-2-ddc88dd9-4kcss       1/1     Running   0          15m
+pod/rest-st-2-7b767bf688-z4pnb   1/1     Running   0          13h
+pod/svclb-gw-st-2-85lkl          1/1     Running   0          15m
+pod/svclb-rest-st-2-7zc4g        1/1     Running   0          13h
+
+NAME                    TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)           AGE
+service/ext-gw-st-2     ClusterIP      10.43.188.203   172.28.128.63   20000/TCP         2m
+service/ext-rest-st-2   ClusterIP      10.43.33.93     172.28.128.63   22222/TCP         13h
+service/gw-st-2         LoadBalancer   10.43.95.218    10.0.2.15       20000:31155/TCP   15m
+service/kubernetes      ClusterIP      10.43.0.1       <none>          443/TCP           13h
+service/rest-st-2       LoadBalancer   10.43.215.43    10.0.2.15       22222:32079/TCP   13h
+
+NAME                             DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/svclb-gw-st-2     1         1         1       1            1           <none>          15m
+daemonset.apps/svclb-rest-st-2   1         1         1       1            1           <none>          13h
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/gw-st-2     1/1     1            1           15m
+deployment.apps/rest-st-2   1/1     1            1           13h
+
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/gw-st-2-ddc88dd9       1         1         1       15m
+replicaset.apps/rest-st-2-7b767bf688   1         1         1       13h
+[root@minikube springgw]# kubectl get pods -A
+NAMESPACE     NAME                         READY   STATUS      RESTARTS   AGE
+default       gw-st-2-ddc88dd9-4kcss       1/1     Running     0          16m
+default       rest-st-2-7b767bf688-z4pnb   1/1     Running     0          13h
+default       svclb-gw-st-2-85lkl          1/1     Running     0          16m
+default       svclb-rest-st-2-7zc4g        1/1     Running     0          13h
+kube-system   coredns-b7464766c-sv56q      1/1     Running     0          13h
+kube-system   helm-install-traefik-p9wtc   0/1     Completed   0          13h
+kube-system   svclb-traefik-z8c8w          2/2     Running     0          13h
+kube-system   traefik-5c79b789c5-pbpvp     1/1     Running     0          13h
+[root@minikube springgw]#
+```
 
 
+# Explanation
+
+Just picture
+
+![Explanation](/img3.png)
