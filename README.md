@@ -3,6 +3,12 @@
     Simple and Minimal starter 2 for spring boot microservices and angular js .
 With / without docker and kubernetes (using K3S)
 
+# Explanation
+
+Just picture
+
+![Explanation](/img3.png)
+
 # Run options
  * On local station using regular java applications
  * Inside vagrant box with k8s and docker ( require some adition steps)
@@ -124,10 +130,3 @@ kube-system   svclb-traefik-z8c8w          2/2     Running     0          13h
 kube-system   traefik-5c79b789c5-pbpvp     1/1     Running     0          13h
 [root@minikube springgw]#
 ```
-
-
-# Explanation
-
-Just picture
-
-![Explanation](/img3.png)
