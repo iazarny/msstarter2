@@ -131,3 +131,14 @@ kube-system   svclb-traefik-z8c8w          2/2     Running     0          13h
 kube-system   traefik-5c79b789c5-pbpvp     1/1     Running     0          13h
 [root@minikube springgw]#
 ```
+
+# Run with docker only
+
+```
+[root@dev1 ~]# docker run -d -p 22222:22222  --restart=always --name zrest localhost:5000/rest-st-2
+461ffccad417d834c29abfe2a3b11c11d4cd7d8016c4e043ba37934daea49e75
+
+[root@dev1 ~]# docker run -d -p 20000:20000  --restart=always  --link zrest:rest-st-2  --name zgw localhost:5000/gw-st-2
+eeaa20b4f2772609c6855c13938c5e39cbfc22032ebc772d345912fdf17dc359
+
+```
