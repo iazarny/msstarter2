@@ -11,6 +11,7 @@
     <properties>
         <fabric8-plugin.version>4.2.0</fabric8-plugin.version>
         <gmaven-plugin.version>1.0</gmaven-plugin.version>
+        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
     </properties>
 
 

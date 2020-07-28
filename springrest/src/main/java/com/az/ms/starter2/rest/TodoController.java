@@ -12,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +35,7 @@ public class TodoController {
 
     @PostMapping("/todos")
     @ApiOperation("Create an todoitem")
-    public TodoEntiry createTodo(@Valid @RequestBody TodoEntiry todoEntiry) {
+    public TodoEntiry createTodo( @RequestBody TodoEntiry todoEntiry) {
         log.info("Create new to do item with title {}", todoEntiry.getId());
         return todoService.createTodo(todoEntiry);
     }
@@ -57,7 +56,7 @@ public class TodoController {
     @PutMapping("/todos/{id}")
     @ApiOperation("Update todo with specific ID")
     public ResponseEntity<TodoEntiry> updateTodo(@PathVariable(value = "id") Long todoId,
-                                                 @Valid @RequestBody TodoEntiry todoEntiryDetail) {
+                                                  @RequestBody TodoEntiry todoEntiryDetail) {
         log.info("Update to do by id {}", todoId);
         TodoEntiry todoEntiry = todoService.updateTodo(todoId, todoEntiryDetail);
         if(todoEntiry == null) {

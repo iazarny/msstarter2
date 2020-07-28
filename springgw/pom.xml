@@ -1,139 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.az.ms</groupId>
-	<artifactId>gw-st-2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-	<name>Gateway starter2</name>
-	<description>Spring GW 2</description>
+    <groupId>com.az.ms</groupId>
+    <artifactId>gw-st-2</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Gateway starter2</name>
+    <description>Spring GW 2</description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.6.RELEASE</version>
-                <relativePath />
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/>
+    </parent>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Greenwich.SR1</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <properties>
+        <java.version>1.8</java.version>
+        <fabric8-plugin.version>4.4.1</fabric8-plugin.version>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring-boot-starter-web</artifactId>
-					<groupId>org.springframework.boot</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<properties>
-		<java.version>1.8</java.version>
-		<fabric8-plugin.version>4.2.0</fabric8-plugin.version>
-	</properties>
-
-	<build>
-		<plugins>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
 
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-			<plugin>
-				<groupId>io.fabric8</groupId>
-				<artifactId>fabric8-maven-plugin</artifactId>
-				<version>${fabric8-plugin.version}</version>
-				<configuration>
-					<images>
-						<image>
-							<name>localhost:5000/${project.artifactId}</name>
-							<build>
-								<from>openjdk:8-jdk-alpine</from>
-								<tags>
-									<tag>2</tag>
-									<tag>latest</tag>
-									<tag>${project.version}</tag>
-								</tags>
-								<ports>
-									<port>20000</port>
-								</ports>
-								<entryPoint>
-									<exec>
-										<arg>java</arg>
-										<arg>-jar</arg>
-										<arg>/maven/${project.build.finalName}.${project.packaging}</arg>
-										<arg>--debug</arg>
-									</exec>
-								</entryPoint>
-								<assembly>
-									<mode>dir</mode>
-									<descriptor>assembly.xml</descriptor>
-								</assembly>
-							</build>
-						</image>
-					</images>
-				</configuration>
-			</plugin>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 
 
-		</plugins>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>${fabric8-plugin.version}</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>localhost:5000/${project.artifactId}</name>
+                            <build>
+                                <from>openjdk:8-jdk-alpine</from>
+                                <tags>
+                                    <tag>2</tag>
+                                    <tag>latest</tag>
+                                    <tag>${project.version}</tag>
+                                </tags>
+                                <ports>
+                                    <port>20000</port>
+                                </ports>
+                                <entryPoint>
+                                    <exec>
+                                        <arg>java</arg>
+                                        <arg>-jar</arg>
+                                        <arg>/maven/${project.build.finalName}.${project.packaging}</arg>
+                                        <arg>--debug</arg>
+                                    </exec>
+                                </entryPoint>
+                                <assembly>
+                                    <mode>dir</mode>
+                                    <descriptor>assembly.xml</descriptor>
+                                </assembly>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
 
 
-	</build>
-	<profiles>
-		<profile>
-			<id>only-eclipse</id>
-			<activation>
-				<property>
-					<name>m2e.version</name>
-				</property>
-			</activation>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>org.eclipse.m2e</groupId>
-							<artifactId>lifecycle-mapping</artifactId>
-							<version>1.0.0</version>
-							<configuration>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-	</profiles>
+        </plugins>
+
+
+    </build>
+    <profiles>
+        <profile>
+            <id>only-eclipse</id>
+            <activation>
+                <property>
+                    <name>m2e.version</name>
+                </property>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.eclipse.m2e</groupId>
+                            <artifactId>lifecycle-mapping</artifactId>
+                            <version>1.0.0</version>
+                            <configuration>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
