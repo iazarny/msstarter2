@@ -4,6 +4,7 @@
  * Look for previos for more integration options
  * With and without docker and kubernetes (using K3S)
  * Explanation - Just picture. The rest for information read bellow
+ * 28-Jul-2020 Bump spring boot and cloud versions
 
 ![Explanation](/img3.png)
 
