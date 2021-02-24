@@ -1,0 +1,8 @@
+#!/bin/bash
+
+MSG="$1"
+if ! grep -P "(^\[MEJSH-\d{3,5}\].{50,})|(Merged)" "$MSG";then
+    cat "$MSG"
+    echo "Your commit message must contain tiket number in [MEJSH-XXXXX] format. Where XXXXX from 3 to 5 digits. And have message lenght not less that 50 "
+    exit 1
+fi
